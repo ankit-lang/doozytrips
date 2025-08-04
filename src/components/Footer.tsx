@@ -6,6 +6,7 @@ const menuItems = ['Home', 'About us', 'Destinations', 'Contact us']
 const destinations = ['Maldives', 'Bali', 'Sri Lanka', 'Seychelles']
 import logo from '../assests/logo.png'
 import { FaFacebookF, FaInstagram, FaYoutube } from 'react-icons/fa'
+import '../index.css'
 
 const social = [
   { name: 'Facebook', Icon: FaFacebookF, url: 'https://facebook.com' },
@@ -21,12 +22,15 @@ const columnVariants = {
 
 export default function Footer() {
   return (
+    <>
+{/* <div class="containere absolute"/> */}
+
     <motion.footer
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}
       transition={{ staggerChildren: 0.15 }}
-      className="bg-[#03153B] text-gray-300"
+      className="bg-[#03153B] relative z-1  text-gray-300"
     >
       {/* Top content */}
       <div className="max-w-7xl mx-auto px-4 py-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
@@ -111,5 +115,6 @@ export default function Footer() {
         </div>
       </motion.div>
     </motion.footer>
+    </>
   )
 }
