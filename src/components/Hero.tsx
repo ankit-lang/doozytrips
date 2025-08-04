@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { ArrowRight, Play, ChevronLeft, ChevronRight } from 'lucide-react';
 import { SearchBar } from './Searchbar';
-
+import iter from "../assests/iter.png";
 const Hero: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -12,14 +12,14 @@ const Hero: React.FC = () => {
 
   const slides = [
     {
-      image: 'https://images.pexels.com/photos/1024970/pexels-photo-1024970.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop',
-      title: 'Exceptional Destination Management',
-      subtitle: 'Creating unforgettable experiences and seamless travel solutions for corporate events, conferences, and luxury travel worldwide.'
-    },
-    {
       image: 'https://images.pexels.com/photos/1190297/pexels-photo-1190297.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop',
       title: 'Corporate Event Excellence',
       subtitle: 'Professional event planning and execution with meticulous attention to every detail for your business success.'
+    },
+    {
+      image: iter,
+      title: 'Exceptional Destination Management',
+      subtitle: 'Creating unforgettable experiences and seamless travel solutions for corporate events, conferences, and luxury travel worldwide.'
     },
     {
       image: 'https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop',
