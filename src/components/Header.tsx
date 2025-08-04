@@ -31,7 +31,7 @@ const Header: React.FC = () => {
       isScrolled ? 'bg-white shadow-lg' : 'bg-transparent'
     }`}>
       {/* Top Bar */}
-      <div className={`bg-primary text-white text-sm py-2 md:px-20 px-2 transition-all duration-1000 ease-out ${
+      <div className={`bg-primary text-white hidden md:flex text-sm py-2 md:px-20 px-2 transition-all duration-1000 ease-out ${
         isLoaded ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0'
       }`}>
         <div className="container mx-auto text-center  flex justify-between items-center">

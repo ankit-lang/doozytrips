@@ -48,7 +48,7 @@ function DestinationCard({ name, imgSrc, className = '' }) {
 // Main component
 export default function PopularDestinations() {
   return (
-    <section className="py-12 px-4 bg-gray-100">
+    <section className="py-12 px-4 mt-10 bg-gray-100">
       <div className="max-w-7xl mx-auto">
         {/* Row 1: Text + Hero */}
         <motion.div
