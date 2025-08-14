@@ -69,8 +69,8 @@ export default function SupportPage() {
           </p>
         </div>
       </motion.div>
-      <Footer/>
     </div>
+      <Footer/>
     </>
   );
 }
