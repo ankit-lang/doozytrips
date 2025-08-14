@@ -120,18 +120,19 @@ const Hero: React.FC = () => {
         <div className={`transform transition-all duration-1000 ease-out ${
           isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-24 opacity-0'
         }`}>
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
             {slides[currentSlide].title.split(' ').map((word, index) => (
               <span 
                 key={index} 
                 className={`inline-block transition-all duration-1000 ease-out ${
                   isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-24 opacity-0'
-                } ${index === slides[currentSlide].title.split(' ').length - 1 ? 'block text-amber-500' : ''}`}
+                } ${index === slides[currentSlide].title.split(' ').length - 1 ? 'block text-amber-500' : ' '}`}
                 style={{ transitionDelay: `${200 + index * 100}ms` }}
               >
-                {word}{index !== slides[currentSlide].title.split(' ').length - 1 ? ' ' : ''}
+                {/* { "   "+  word } {index !== slides[currentSlide].title.split(' ').length - 1 ? ' ' : ''} */}
               </span>
             ))}
+            {slides[currentSlide].title}
           </h1>
         </div>
 
@@ -141,7 +142,7 @@ const Hero: React.FC = () => {
           isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-24 opacity-0'
         }`}>
           <p 
-            className="text-xl md:text-2xl mb-8 text-gray-200 max-w-2xl mx-auto"
+            className="text-md md:text-xl mb-8 text-gray-200 max-w-2xl mx-auto"
             style={{ transitionDelay: '600ms' }}
           >
             {slides[currentSlide].subtitle}
