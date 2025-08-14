@@ -13,24 +13,20 @@ const Hero: React.FC = () => {
   const slides = [
     {
       image: "/banner/3.png",
-      title: 'Corporate Event Excellence',
-      subtitle: 'Professional event planning and execution with meticulous attention to every detail for your business success.'
+      title: 'Emergency travel solutions at unbeatable rates',
+      subtitle: 'When you need to go now, you deserve great value. Call, email, or message us—can’t wait, won’t wait'
     },
     {
       image: "/banner/2.png",
-      title: 'Exceptional Destination Management',
-      subtitle: 'Creating unforgettable experiences and seamless travel solutions for corporate events, conferences, and luxury travel worldwide.'
+      title: 'Canada-wide service, and support on both sides of the globe',
+      subtitle: 'When you need to go now, you deserve great value. Call, email, or message us—can’t wait, won’t wait'
     },
     {
-      image: "/banner/1.png",
-      title: 'Luxury Travel Experiences',
-      subtitle: 'Curated premium travel solutions that exceed expectations and create lasting memories for your guests.'
+      image: "/banner/3.png",
+      title: 'Friendly, 24/7 personal assistance',
+      subtitle: 'When you need to go now, you deserve great value. Call, email, or message us—can’t wait, won’t wait.'
     },
-    {
-      image: '/banner/3.png',
-      title: 'Global Network Partners',
-      subtitle: 'Leveraging our worldwide connections to deliver seamless experiences across multiple destinations.'
-    }
+   
   ];
 
   useEffect(() => {

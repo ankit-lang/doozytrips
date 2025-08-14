@@ -51,14 +51,10 @@ export default function AboutSection() {
         >
           <p className="text-blue-600 font-semibold uppercase mb-2">About Us</p>
           <h2 className="text-3xl lg:text-4xl font-bold mb-4">
-            Plan Your Tour with Ishull DMC
+            Doozy Trips—Trusted for urgent travel, across Canada and beyond.
           </h2> 
           <p className="text-gray-600 mb-8 leading-relaxed">
-            ISHULL DMC Private Limited, founded in year 2018, has grown to
-            provide bespoke client focused travel experiences in 4 destinations
-            across Asia, including: Maldives, Bali, Sri Lanka and Seychelles;
-            connecting travelers with the inherent qualities of each
-            destination through a series of unrivaled encounters.
+          Your “now-must-travel” is our moment to shine. We chase the best last-minute rates so you don’t have to.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">
