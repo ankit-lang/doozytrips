@@ -26,18 +26,18 @@ export default function AdventureActivity() {
       {/* <div className="absolute inset-0 bg-blue-900/60" /> */}
 
       {/* Content container */}
-      <div className="relative z-10 max-w-7xl mx-auto py-20 px-4 text-center text-primary">
+      <div className="relative z-10  mb-20 md:mb-10 max-w-7xl mx-auto py-20 px-4 text-center text-primary">
         <p className="uppercase text-sm tracking-wider mb-2">Ishull DMC</p>
         <h2 className="text-4xl md:text-5xl font-bold mb-12">Adventure &amp; Activity</h2>
 
-        <div className="flex flex-wrap justify-center gap-12">
+        <div className="flex flex-wrap  justify-center items-center gap-12">
           {activities.map((act, i) => (
             <motion.div
               key={act.name}
               initial={{ y: 50, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: i * 0.15, duration: 0.6 }}
-              className="flex flex-col items-center"
+              className="flex flex-col items-center justify-center"
             >
               <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mb-3">
                 <img src={adven} alt={act.name} className="w-8 h-8" />

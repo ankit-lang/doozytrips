@@ -2,7 +2,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import iter from "../assests/iter.png"
-const menuItems = ['Home', 'About us', 'Destinations', 'Contact us']
+const menuItems = ['Home', 'About us', '', 'Contact us']
 const destinations = ['Maldives', 'Bali', 'Sri Lanka', 'Seychelles']
 import logo from '../assests/logo.png'
 import { FaFacebookF, FaInstagram, FaYoutube } from 'react-icons/fa'
@@ -38,7 +38,7 @@ export default function Footer() {
         <motion.div variants={columnVariants}>
           <img src={logo} alt="doozytrips" className="h-12 mb-4" />
           <p className="text-sm leading-relaxed">
-           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit aut aliquam eos dolorem, quisquam consectetur? Dolor tenetur eveniet quo aspernatur, sunt ipsam unde cumque, blanditiis aliquam earum ratione molestias cum.
+          
           </p>
           <div className="flex space-x-4 mt-6">
            {social.map(({ name, Icon, url }) => (

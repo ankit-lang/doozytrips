@@ -1,11 +1,11 @@
 import { motion } from "framer-motion";
 import { Plane, Clock, MapPin, Star } from "lucide-react";
-import  Card  from "./Card";
-import Header from "./Header";
-import Footer from "./Footer";
-import TextType, { TextAnimate } from "./splittext";
+import  Card  from "../Card";
+import Header from "../Header";
+import Footer from "../Footer";
+import TextType, { TextAnimate } from "../splittext";
 
-export default function Aboutus() {
+export default function Vacationpage() {
   return (
       <>
       <Header/>
@@ -19,7 +19,7 @@ export default function Aboutus() {
             transition={{ duration: 0.5 }}
             className="text-3xl md:text-5xl font-extrabold"
           >
-       Doozy Trips—Trusted for urgent travel, across Canada and beyond
+           Holidays in a hurry? We’ll hook you up
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 10 }}
@@ -27,8 +27,7 @@ export default function Aboutus() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="mt-4 max-w-3xl mx-auto text-lg text-sky-100"
           >
-          <TextType text="Your “now-must-travel” is our moment to shine. We chase the best last-minute rates so you don’t have to.
-
+          <TextType text="Whether it’s a sudden beach retreat, an Alpine escape, or a cultural trip, we tailor packages that include flights, stays, and transfers—quickly, affordably, and stress-free.
 " />
           </motion.p>
         </div>
@@ -36,27 +35,26 @@ export default function Aboutus() {
 
       {/* Features */}
             <div className="!text-black text-3xl text-center mt-5">
-                  <TextType  textColors={["black"]}  text=" Why Choose Us" />
+                  <TextType  textColors={["black"]}  text="Features" />
             </div>
       <section className="max-w-6xl flex justify-center mx-auto px-4 py-12 md:py-16">
 
         <div className="grid md:grid-cols-3 gap-8">
-          
-             
-          <Card  ele={ <span><Star className="h-6 w-6 text-sky-700" /> </span> } head=" 
-We’re nimble, resourceful, and intimately connected to Canadian travel networks.
+          <Card  ele={ <span><Star className="h-6 w-6 text-sky-700" /> </span> } head=" You name the vibe—relaxing, adventurous, or sightseeing—and we fit your budget.
 
+
+" sub="  
+" >
+             
+          </Card>
+          <Card  ele={ <span><Star className="h-6 w-6 text-sky-700" /> </span> } head=" 
+No booking account needed. We take your details, do the magic, and get you ready to go.
 " sub=" 
 " >
              
           </Card>
-          <Card  ele={ <span><Star className="h-6 w-6 text-sky-700" /> </span> } head="Always ready—24 hours a day—for sudden trips, flight disruptions, or surprise opportunities." sub="" >
-             
-          </Card>
-<Card  ele={ <span><Star className="h-6 w-6 text-sky-700" /> </span> } head="
-
-Personalized, friendly support—no bots, no hold music, just real people.
-" sub="" >
+          <Card  ele={ <span><Star className="h-6 w-6 text-sky-700" /> </span> } head="Options for groups, family trips, and personal preferences (like allergies or mobility needs)." sub="  
+" >
              
           </Card>
 

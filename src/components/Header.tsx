@@ -20,10 +20,15 @@ const Header: React.FC = () => {
   }, []);
 
   const navItems = [
-    { name: 'Home', href: '#home' },
-    { name: 'Services', href: '#services' },
-    { name: 'About', href: '#about' },
-    { name: 'Contact', href: '#contact' },
+    // Flights • Vacations • Last-Minute Packages • Tours & Cruises • Car Rentals • Travel Insurance • Deals
+    { name: 'Home', href: '/' },
+    { name: 'Fligts', href: '/flights' },
+    { name: 'Vacations', href: '/vacations' },
+    { name: 'About Us', href: '/aboutus' },
+    { name: 'Tours & Cruises', href: '/tours' },
+      { name: 'Notes', href: '/notes' },
+        { name: 'Help&Support', href: '/support' },
+          { name: 'Deals', href: '/deals' },
   ];
 
   return (
@@ -84,11 +89,11 @@ const Header: React.FC = () => {
                 {item.name}
               </a>
             ))}
-            <button className={`bg-primary text-white px-6 py-2 rounded-full hover:bg-amber-600 transition-all duration-700 transform hover:scale-105 ${
+            {/* <button className={`bg-primary text-white px-6 py-2 rounded-full hover:bg-amber-600 transition-all duration-700 transform hover:scale-105 ${
               isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-6 opacity-0'
             }`} style={{ transitionDelay: '800ms' }}>
               Get Quote
-            </button>
+            </button> */}
           </div>
 
           {/* Mobile Menu Button */}
@@ -120,9 +125,9 @@ const Header: React.FC = () => {
                 {item.name}
               </a>
             ))}
-            <button className="w-full mt-4 bg-primary text-white py-2 rounded-full hover:bg-amber-600 transition-colors">
+            {/* <button className="w-full mt-4 bg-primary text-white py-2 rounded-full hover:bg-amber-600 transition-colors">
               Get Quote
-            </button>
+            </button> */}
           </div>
         )}
       </nav>

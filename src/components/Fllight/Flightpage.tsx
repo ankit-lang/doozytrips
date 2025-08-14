@@ -1,17 +1,17 @@
 import { motion } from "framer-motion";
 import { Plane, Clock, MapPin, Star } from "lucide-react";
-import  Card  from "./Card";
-import Header from "./Header";
-import Footer from "./Footer";
-import TextType, { TextAnimate } from "./splittext";
+import  Card  from "../Card";
+import Header from "../Header";
+import Footer from "../Footer";
+import TextType, { TextAnimate } from "../splittext";
 
-export default function Aboutus() {
+export default function Flightpage() {
   return (
       <>
       <Header/>
     <div className="min-h-screen bg-gradient-to-b from-white via-sky-50 to-white text-gray-900">
       {/* Banner */}
-      <section className="bg-sky-700 text-white py-40">
+      <section className="bg-sky-700 text-white   py-40">
         <div className="max-w-6xl mx-auto px-4 text-center">
           <motion.h1
             initial={{ opacity: 0, y: 10 }}
@@ -19,7 +19,7 @@ export default function Aboutus() {
             transition={{ duration: 0.5 }}
             className="text-3xl md:text-5xl font-extrabold"
           >
-       Doozy Trips—Trusted for urgent travel, across Canada and beyond
+            Flight deals that don’t let urgency cost you more.
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 10 }}
@@ -27,8 +27,7 @@ export default function Aboutus() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="mt-4 max-w-3xl mx-auto text-lg text-sky-100"
           >
-          <TextType text="Your “now-must-travel” is our moment to shine. We chase the best last-minute rates so you don’t have to.
-
+          <TextType text="Stuck with tomorrow’s travel plans? We’ll sort flights across Canada and worldwide at wallet-friendly prices. With 24/7 support, you can call or email us anytime—and now you’re moving.
 " />
           </motion.p>
         </div>
@@ -36,27 +35,24 @@ export default function Aboutus() {
 
       {/* Features */}
             <div className="!text-black text-3xl text-center mt-5">
-                  <TextType  textColors={["black"]}  text=" Why Choose Us" />
+                  <TextType  textColors={["black"]}  text="Features" />
             </div>
       <section className="max-w-6xl flex justify-center mx-auto px-4 py-12 md:py-16">
 
         <div className="grid md:grid-cols-3 gap-8">
-          
+          <Card  ele={ <span><Star className="h-6 w-6 text-sky-700" /> </span> } head=" Last-minute flights from major Canadian hubs:" sub="  Toronto, Vancouver, Calgary, Edmonton, Montreal, etc.
+" >
              
+          </Card>
           <Card  ele={ <span><Star className="h-6 w-6 text-sky-700" /> </span> } head=" 
-We’re nimble, resourceful, and intimately connected to Canadian travel networks.
 
+Multi-city itineraries handled like clockwork
 " sub=" 
 " >
              
           </Card>
-          <Card  ele={ <span><Star className="h-6 w-6 text-sky-700" /> </span> } head="Always ready—24 hours a day—for sudden trips, flight disruptions, or surprise opportunities." sub="" >
-             
-          </Card>
-<Card  ele={ <span><Star className="h-6 w-6 text-sky-700" /> </span> } head="
-
-Personalized, friendly support—no bots, no hold music, just real people.
-" sub="" >
+          <Card  ele={ <span><Star className="h-6 w-6 text-sky-700" /> </span> } head="Frequent flyer programs? We’ll help you use them!" sub="  
+" >
              
           </Card>
 
@@ -71,7 +67,7 @@ Personalized, friendly support—no bots, no hold music, just real people.
       </section>
 
       {/* FAQ */}
-      {/* <section className="bg-gray-50 py-12 md:py-16">
+      <section className="bg-gray-50 py-12 md:py-16">
         <div className="max-w-4xl mx-auto px-4">
           <h2 className="text-2xl font-bold mb-6">FAQ</h2>
           <div className="border border-gray-200 rounded-lg p-6 bg-white shadow-sm">
@@ -83,7 +79,7 @@ Personalized, friendly support—no bots, no hold music, just real people.
             </p>
           </div>
         </div>
-      </section> */}
+      </section>
     </div>
     <Footer/>
     </>

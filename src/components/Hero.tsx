@@ -12,22 +12,22 @@ const Hero: React.FC = () => {
 
   const slides = [
     {
-      image: 'https://images.pexels.com/photos/1190297/pexels-photo-1190297.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop',
+      image: "/banner/3.png",
       title: 'Corporate Event Excellence',
       subtitle: 'Professional event planning and execution with meticulous attention to every detail for your business success.'
     },
     {
-      image: iter,
+      image: "/banner/2.png",
       title: 'Exceptional Destination Management',
       subtitle: 'Creating unforgettable experiences and seamless travel solutions for corporate events, conferences, and luxury travel worldwide.'
     },
     {
-      image: 'https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop',
+      image: "/banner/1.png",
       title: 'Luxury Travel Experiences',
       subtitle: 'Curated premium travel solutions that exceed expectations and create lasting memories for your guests.'
     },
     {
-      image: 'https://images.pexels.com/photos/1581384/pexels-photo-1581384.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop',
+      image: '/banner/3.png',
       title: 'Global Network Partners',
       subtitle: 'Leveraging our worldwide connections to deliver seamless experiences across multiple destinations.'
     }
@@ -63,25 +63,25 @@ const Hero: React.FC = () => {
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Carousel Background Images */}
-      <div className="absolute inset-0">
-        {slides.map((slide, index) => (
-          <div
-            key={index}
-            className={`absolute inset-0 bg-cover bg-center bg-no-repeat transition-all duration-1000 ${
-              index === currentSlide 
-                ? 'opacity-100 scale-110' 
-                : 'opacity-0 scale-100'
-            }`}
-            style={{
-              backgroundImage: `url(${slide.image})`,
-              transform: index === currentSlide ? 'scale(1.1)' : 'scale(1)',
-              transition: 'all 1000ms ease-in-out'
-            }}
-          >
-            <div className="absolute inset-0 bg-black opacity-50"></div>
-          </div>
-        ))}
-      </div>
+     <div className="absolute inset-0">
+  {slides.map((slide, index) => (
+    <div
+      key={index}
+      className={`absolute inset-0 bg-contain bg-center bg-no-repeat transition-opacity duration-1000 ease-in-out ${
+        index === currentSlide ? 'opacity-100' : 'opacity-0'
+      }`}
+      style={{
+        backgroundImage: `url(${slide.image})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        transform: index === currentSlide ? 'scale(1.05)' : 'scale(1)',
+        transition: 'transform 2000ms ease-in-out, opacity 1000ms ease-in-out'
+      }}
+    >
+      <div className="absolute inset-0 bg-black opacity-50"></div>
+    </div>
+  ))}
+</div>
 
       {/* Navigation Arrows */}
       <button
@@ -107,7 +107,7 @@ const Hero: React.FC = () => {
       </button>
 
       {/* Animated Background Elements */}
-      <div className="absolute inset-0 z-5">
+      {/* <div className="absolute inset-0 z-5">
         <div className={`floating-element absolute top-20 left-10 w-20 h-20 bg-amber-500 opacity-20 rounded-full transition-all duration-1000 ${
           isLoaded ? 'translate-y-0 opacity-20' : 'translate-y-24 opacity-0'
         }`} style={{ transitionDelay: '1200ms' }}></div>
@@ -117,7 +117,7 @@ const Hero: React.FC = () => {
         <div className={`floating-element absolute bottom-40 left-20 w-12 h-12 bg-white opacity-20 rounded-full transition-all duration-1000 ${
           isLoaded ? 'translate-y-0 opacity-20' : 'translate-y-24 opacity-0'
         }`} style={{ animationDelay: '4s', transitionDelay: '1600ms' }}></div>
-      </div>
+      </div> */}
 
       {/* Content */}
       <div className="relative z-10 text-center text-white px-4 max-w-4xl mt-20 mx-auto">

@@ -5,7 +5,7 @@ import Header from "./Header";
 import Footer from "./Footer";
 import TextType, { TextAnimate } from "./splittext";
 
-export default function Aboutus() {
+export default function Tours() {
   return (
       <>
       <Header/>
@@ -19,7 +19,7 @@ export default function Aboutus() {
             transition={{ duration: 0.5 }}
             className="text-3xl md:text-5xl font-extrabold"
           >
-       Doozy Trips—Trusted for urgent travel, across Canada and beyond
+           Tours & Cruises—even if it’s last minute, we have your back.
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 10 }}
@@ -27,7 +27,7 @@ export default function Aboutus() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="mt-4 max-w-3xl mx-auto text-lg text-sky-100"
           >
-          <TextType text="Your “now-must-travel” is our moment to shine. We chase the best last-minute rates so you don’t have to.
+          <TextType text=" Ready to set sail or explore guided experiences? With Doozy Trips, you can dive into river cruises, wilderness tours, and more—tailored to urgency, not sacrificed to it.
 
 " />
           </motion.p>
@@ -36,27 +36,29 @@ export default function Aboutus() {
 
       {/* Features */}
             <div className="!text-black text-3xl text-center mt-5">
-                  <TextType  textColors={["black"]}  text=" Why Choose Us" />
+                  <TextType  textColors={["black"]}  text="Highlights" />
             </div>
       <section className="max-w-6xl flex justify-center mx-auto px-4 py-12 md:py-16">
 
         <div className="grid md:grid-cols-3 gap-8">
-          
-             
-          <Card  ele={ <span><Star className="h-6 w-6 text-sky-700" /> </span> } head=" 
-We’re nimble, resourceful, and intimately connected to Canadian travel networks.
+          <Card  ele={ <span><Star className="h-6 w-6 text-sky-700" /> </span> } head=" Handpicked tours—great value, even when plans change fast
+
 
 " sub=" 
 " >
              
           </Card>
-          <Card  ele={ <span><Star className="h-6 w-6 text-sky-700" /> </span> } head="Always ready—24 hours a day—for sudden trips, flight disruptions, or surprise opportunities." sub="" >
+          <Card  ele={ <span><Star className="h-6 w-6 text-sky-700" /> </span> } head=" 
+Cruises included? From the Pacific coast to Caribbean joys—pack your bags, we’ll handle the rest.
+" sub=" 
+" >
              
           </Card>
-<Card  ele={ <span><Star className="h-6 w-6 text-sky-700" /> </span> } head="
+          <Card  ele={ <span><Star className="h-6 w-6 text-sky-700" /> </span> } head="
 
-Personalized, friendly support—no bots, no hold music, just real people.
-" sub="" >
+Get support from booking to disembarkment.
+" sub="  
+" >
              
           </Card>
 
