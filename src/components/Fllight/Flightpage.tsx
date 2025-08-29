@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Plane, Clock, MapPin, Star } from "lucide-react";
+import { Plane, Clock, MapPin, Star, Route, Medal } from "lucide-react";
 import  Card  from "../Card";
 import Header from "../Header";
 import Footer from "../Footer";
@@ -11,7 +11,7 @@ export default function Flightpage() {
       <Header/>
     <div className="min-h-screen bg-gradient-to-b from-white via-sky-50 to-white text-gray-900">
       {/* Banner */}
-      <section className="bg-sky-700 text-white   py-40">
+      <section className="bg-sky-700 text-white pb-20  pt-40">
         <div className="max-w-6xl mx-auto px-4 text-center">
           <motion.h1
             initial={{ opacity: 0, y: 10 }}
@@ -27,32 +27,35 @@ export default function Flightpage() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="mt-4 max-w-3xl mx-auto text-lg text-sky-100"
           >
-          <TextType text="Stuck with tomorrow’s travel plans? We’ll sort flights across Canada and worldwide at wallet-friendly prices. With 24/7 support, you can call or email us anytime—and now you’re moving.
+          <TextType text="Need to fly out tomorrow—or even today? Don’t stress. At Doozy Trips, we specialize in last-minute flight bookings that keep your travel affordable and hassle-free. Whether you’re flying within Canada or across the globe, our team works around the clock to secure the best available fares. With 24/7 personal support, one quick call or email is all it takes to get you moving.
+
 " />
           </motion.p>
         </div>
       </section>
 
       {/* Features */}
-            <div className="!text-black text-3xl text-center mt-5">
+            <div className="!text-black md:text-5xl font-semibold text-3xl  text-center mt-10">
                   <TextType  textColors={["black"]}  text="Features" />
             </div>
       <section className="max-w-6xl flex justify-center mx-auto px-4 py-12 md:py-16">
 
         <div className="grid md:grid-cols-3 gap-8">
-          <Card  ele={ <span><Star className="h-6 w-6 text-sky-700" /> </span> } head=" Last-minute flights from major Canadian hubs:" sub="  Toronto, Vancouver, Calgary, Edmonton, Montreal, etc.
-" >
+          <Card  ele={ <span><Star className="h-6 w-6 text-sky-700" /> </span> } head="  Last-minute flights from major Canadian hubs
+" sub="  Departing from Toronto, Vancouver, Calgary, Edmonton, or Montreal? We find the fastest and most cost-effective routes available—so you don’t waste time searching.
+
+" icon = {<Plane className="text-rose-600 dark:text-rose-300" size={36} />} >
              
           </Card>
           <Card  ele={ <span><Star className="h-6 w-6 text-sky-700" /> </span> } head=" 
-
-Multi-city itineraries handled like clockwork
-" sub=" 
-" >
+Multi-city itineraries made easy
+" sub=" Whether it’s Canada to India and back, or multiple stops along the way, we stitch together complex routes with clockwork precision. You focus on the trip—we handle the planning.
+" icon={<Route className="text-rose-600 dark:text-rose-300" size={36} />}>
              
           </Card>
-          <Card  ele={ <span><Star className="h-6 w-6 text-sky-700" /> </span> } head="Frequent flyer programs? We’ll help you use them!" sub="  
-" >
+          <Card  ele={ <span><Star className="h-6 w-6 text-sky-700" /> </span> } head="Maximize your frequent flyer programs" sub="  Already part of an airline loyalty program? We’ll make sure your miles and points work harder for you, so you get more value every time you fly.
+
+" icon={<Medal  className="text-rose-600 dark:text-rose-300" size={36} />}>
              
           </Card>
 
@@ -75,7 +78,7 @@ Multi-city itineraries handled like clockwork
               Q: Wasn’t planning ahead—is that a problem?
             </h3>
             <p className="text-gray-700">
-              A: Nope—our specialty is best prices when you're on a tight timeline.
+              A:  Not at all. In fact, that’s our specialty. We’re experts in finding the best fares under tight timelines, so you can travel worry-free—even if it’s a last-minute emergency.
             </p>
           </div>
         </div>

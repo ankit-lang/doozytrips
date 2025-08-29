@@ -1,14 +1,21 @@
 import React from 'react';
 import styled from 'styled-components';
+import TextType from './splittext';
 
-const Card = ({ele,head,sub}) => {
+const Card = ({ele,head,sub,icon}) => {
   return (
     <StyledWrapper>
       <div className="card">
         <h2 className='text-center' >
             {/* {ele} */}
-            {head}
-            {sub}
+            <div className="flex  justify-center text-3xl text-center mx-auto mb-4">{icon}</div>
+            <div className="text-2xl font-semibold mb-4">
+              {head}
+              {/* <TextType text={head}/> */}
+            </div>
+           <div className="text-justify">
+             {sub}
+           </div>
         </h2>
       </div>
     </StyledWrapper>
@@ -17,8 +24,8 @@ const Card = ({ele,head,sub}) => {
 
 const StyledWrapper = styled.div`
   .card {
-    width: 250px;
-    height: 254px;
+    width: 280px;
+    height: 340px;
     background: #07182E;
     position: relative;
     display: flex;

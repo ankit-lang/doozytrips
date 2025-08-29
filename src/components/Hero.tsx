@@ -12,20 +12,20 @@ const Hero: React.FC = () => {
 
   const slides = [
     {
-      image: "/banner/3.png",
-      title: 'Emergency travel solutions at unbeatable rates',
+      image: "/banner/1.png",
+      title: 'Doozy Trips – Welcome Canadians on the Move',
       subtitle: 'When you need to go now, you deserve great value. Call, email, or message us—can’t wait, won’t wait'
     },
     {
-      image: "/banner/2.png",
-      title: 'Canada-wide service, and support on both sides of the globe',
+      image: "/banner/8.png",
+      title: 'Urgent Getaways? Doozy Trips Has You Covered—for the best last-minute deals, every time',
       subtitle: 'When you need to go now, you deserve great value. Call, email, or message us—can’t wait, won’t wait'
     },
-    {
-      image: "/banner/3.png",
-      title: 'Friendly, 24/7 personal assistance',
-      subtitle: 'When you need to go now, you deserve great value. Call, email, or message us—can’t wait, won’t wait.'
-    },
+    // {
+    //   image: "/banner/3.png",
+    //   title: 'Urgent Getaways? Doozy Trips Has You Covered—for the best last-minute deals, every time',
+    //   subtitle: 'When you need to go now, you deserve great value. Call, email, or message us—can’t wait, won’t wait.'
+    // },
    
   ];
 
@@ -120,7 +120,7 @@ const Hero: React.FC = () => {
         <div className={`transform transition-all duration-1000 ease-out ${
           isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-24 opacity-0'
         }`}>
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+          <h1 className="text-3xl md:text-5xl font-bold mb-6 leading-tight">
             {slides[currentSlide].title.split(' ').map((word, index) => (
               <span 
                 key={index} 

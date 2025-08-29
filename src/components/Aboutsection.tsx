@@ -2,7 +2,8 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import CountUp from 'react-countup'
-import iter from "../assests/iter.png"
+import iter from "/banner/7.png"
+import img2 from "/banner/4.png"
 
 const stats = [
   { id: 1, end: 5, suffix: '+', label: 'Years Experience' },
@@ -12,7 +13,7 @@ const stats = [
 
 export default function AboutSection() {
   return (
-    <section className="py-16 px-4 bg-white">
+    <section className="py-16 px-4 mb-10 bg-white">
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center lg:items-start gap-8">
         
         {/* LEFT: overlapping images */}
@@ -31,7 +32,7 @@ export default function AboutSection() {
 
           {/* small foreground image */}
           <motion.img
-            src={iter}
+            src={img2}
             alt="Person on laptop"
             initial={{ x: 100, y: 100, opacity: 0 }}
             whileInView={{ x: 0, y: 0, opacity: 1 }}
@@ -50,11 +51,11 @@ export default function AboutSection() {
           viewport={{ once: true, amount: 0.3 }}
         >
           <p className="text-blue-600 font-semibold uppercase mb-2">About Us</p>
-          <h2 className="text-3xl lg:text-4xl font-bold mb-4">
-            Doozy Trips—Trusted for urgent travel, across Canada and beyond.
+          <h2 className="text-3xl lg:text-3xl font-bold mb-4">
+          Doozy Trips: Affordable, effortless, reliable travel with 24/7 personalized support
           </h2> 
           <p className="text-gray-600 mb-8 leading-relaxed">
-          Your “now-must-travel” is our moment to shine. We chase the best last-minute rates so you don’t have to.
+         Doozy Trips: Affordable, effortless, reliable travel with 24/7 personalized support
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">

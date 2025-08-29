@@ -32,7 +32,7 @@ export default function FooterNotesPage() {
             Privacy & Terms
           </h2>
           <p className="text-gray-600 mt-2">
-            We protect your data—always encrypted.
+          Your trust means everything to us. At Doozy Trips, we treat your personal information with the highest level of care. All data is securely stored and encrypted, and we never share your details without consent. For full details, please review our Privacy Policy and Terms & Conditions.
           </p>
         </div>
 
@@ -42,8 +42,9 @@ export default function FooterNotesPage() {
             Booking Fee Notice
           </h2>
           <p className="text-gray-600 mt-2">
-            A standard Expert Service Fee applies to phone or email
-            reservations. Transparent pricing, no surprises.
+          
+To keep our service fast, transparent, and expert-driven, a standard Expert Service Fee applies to reservations made via phone or email. This fee covers the extra time and personal attention that goes into securing urgent or complex bookings. No hidden charges—just honest, upfront pricing every time.
+
           </p>
         </div>
 
@@ -51,9 +52,8 @@ export default function FooterNotesPage() {
         <div>
           <h2 className="text-xl font-semibold text-gray-700">Legal</h2>
           <p className="text-gray-600 mt-2">
-            Conditions apply. Prices in CAD, including taxes/fees. Availability
-            limited for last-minute travel; additional destination charges may
-            apply.
+            All bookings are subject to availability and conditions of carriage. Prices are listed in CAD (Canadian Dollars) and include applicable taxes and fees unless otherwise stated. For last-minute travel, availability may be limited and additional destination charges (such as baggage, airport, or government fees) may apply. Full terms are available at the time of booking.
+
           </p>
         </div>
       </motion.div>

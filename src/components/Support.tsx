@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import Header from "./Header";
 import Footer from "./Footer";
+import TextType from "./splittext";
 
 export default function SupportPage() {
   return (
@@ -19,7 +20,9 @@ export default function SupportPage() {
         <span className="text-blue-600">We're on it</span>—contact us via chat,
         email, or phone.
       </motion.h1>
-
+      <div className="mb-10 md:max-w-[72vw] w-[90vw] text-center ">
+        <TextType  textColors={["black"]}  text="At Doozy Trips, we know travel plans can change in an instant. That’s why our support team is always just a message or call away, ready to solve problems before they become stress. Whether you’re trying to book a last-minute flight, reschedule an itinerary, or get mid-trip assistance, we’re available 24/7 to keep you moving." />
+      </div>
       {/* Support Options */}
       <motion.div
         className="bg-gray-100 rounded-xl mb-10 shadow-lg max-w-3xl w-full p-8 space-y-6"
@@ -36,7 +39,7 @@ export default function SupportPage() {
             >
               reservations@doozytrips.com
             </a>{" "}
-            — get answers within hours
+            — Expect a quick response—most queries are answered within hours so you’re never left waiting.
           </p>
         </div>
 
@@ -57,15 +60,14 @@ export default function SupportPage() {
         <div>
           <h2 className="text-lg font-semibold text-gray-700">Real-Time Help</h2>
           <p className="text-gray-600">
-            Real-time advice and backup support—through booking and mid-trip.
+           From booking to boarding and even mid-journey hiccups, we’re here to guide you with instant solutions.
           </p>
         </div>
 
         <div className="bg-blue-50 p-4 rounded-lg border border-blue-200">
           <h3 className="text-blue-700 font-semibold">Insider Tip</h3>
           <p className="text-gray-700">
-            Send us your emergency travel needs, and we’ll match you with the
-            best solution—fast.
+            Got an emergency travel need? Share the details with us, and we’ll instantly scan the best options—fast, practical, and wallet-friendly.
           </p>
         </div>
       </motion.div>

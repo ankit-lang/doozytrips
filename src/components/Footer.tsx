@@ -2,7 +2,16 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import iter from "../assests/iter.png"
-const menuItems = ['Home', 'About us', '', 'Contact us']
+import { Link } from 'react-router-dom';
+const menuItems = [
+  { name: 'Home', path: '/' },
+  { name: 'About us', path: '/aboutus' },
+  { name: 'Contact us', path: '/support' },
+   { name: 'Flights', path: '/flights' },
+    { name: 'Vacations', path: '/vacations' },
+     { name: 'Notes', path: '/notes' },
+     { name: 'Deals', path: '/deals' },
+]
 const destinations = ['Maldives', 'Bali', 'Sri Lanka', 'Seychelles']
 import logo from '../assests/logo.png'
 import { FaFacebookF, FaInstagram, FaYoutube } from 'react-icons/fa'
@@ -59,9 +68,9 @@ export default function Footer() {
         <motion.div variants={columnVariants}>
           <h4 className="text-white font-semibold mb-4">Menu</h4>
           <ul className="space-y-2 text-sm">
-            {menuItems.map((item) => (
-              <li key={item} className="hover:text-white transition cursor-pointer">
-                {item}
+            {menuItems.map(({ name, path }) => (
+              <li key={name} className="hover:text-white transition cursor-pointer">
+                <Link to={path}>{name}</Link>
               </li>
             ))}
           </ul>

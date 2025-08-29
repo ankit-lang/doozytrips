@@ -10,22 +10,24 @@ import TopTours from './components/Toptour';
 import AboutSection from './components/Aboutsection';
 import PopularDestinations from './components/Populardestination';
 import AdventureActivity from './components/Adventureisland';
+import EmergencyTravelHighlights from './components/Highlight';
 
 function App() {
   return (
     <div className="min-h-screen">
       <Header />
       <Hero />
-      <TopTours/>
+      {/* <TopTours/> */}
+      <EmergencyTravelHighlights/>
       <AboutSection/>
-      <PopularDestinations/>
+      {/* <PopularDestinations/> */}
     
 
       <AdventureActivity/>
  
-      <Services />
+      {/* <Services /> */}
       {/* <About /> */}
-      <Testimonials />
+      {/* <Testimonials /> */}
       <Contact />
       <Footer />
     </div>

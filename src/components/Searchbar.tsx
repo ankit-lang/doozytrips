@@ -75,7 +75,7 @@ export function SearchBar({ onNext }) {
         onClick={handleNext}
         className="h-12 px-6 bg-blue-600 text-white font-medium rounded-md hover:bg-blue-700 transition"
       >
-        Next
+        Book
       </button>
     </div>
   )

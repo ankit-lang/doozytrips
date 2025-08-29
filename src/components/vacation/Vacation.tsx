@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Plane, Clock, MapPin, Star } from "lucide-react";
+import { Plane, Clock, MapPin, Star, Users, MousePointerClick, Umbrella } from "lucide-react";
 import  Card  from "../Card";
 import Header from "../Header";
 import Footer from "../Footer";
@@ -25,36 +25,37 @@ export default function Vacationpage() {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="mt-4 max-w-3xl mx-auto text-lg text-sky-100"
+            className="mt-6 max-w-3xl mx-auto text-lg text-sky-100"
           >
-          <TextType text="Whether it’s a sudden beach retreat, an Alpine escape, or a cultural trip, we tailor packages that include flights, stays, and transfers—quickly, affordably, and stress-free.
+          <TextType text="Last-minute vacation? No problem. Whether you’re craving a quick beach escape, a cultural getaway, or a family holiday, Doozy Trips makes it easy. We focus on flights and planned travel itineraries so you can enjoy a smooth, stress-free trip without the endless searching. Our goal is to get you moving fast—affordably, reliably, and with zero hassle.
 " />
           </motion.p>
         </div>
       </section>
 
       {/* Features */}
-            <div className="!text-black text-3xl text-center mt-5">
-                  <TextType  textColors={["black"]}  text="Features" />
+            <div className="!text-black md:text-5xl text-4xl font-semibold text-center mt-5">
+                  <TextType  textColors={["black"]}  text="Extras" />
             </div>
       <section className="max-w-6xl flex justify-center mx-auto px-4 py-12 md:py-16">
 
         <div className="grid md:grid-cols-3 gap-8">
-          <Card  ele={ <span><Star className="h-6 w-6 text-sky-700" /> </span> } head=" You name the vibe—relaxing, adventurous, or sightseeing—and we fit your budget.
+          <Card  ele={ <span><Star className="h-6 w-6 text-sky-700" /> </span> } head=" Vacations built around your vibe
 
 
-" sub="  
-" >
+" sub="  Looking for a calm retreat, an adventurous journey, or a sightseeing-packed itinerary? We’ll suggest options that fit your style and budget—so you enjoy the trip, your way.
+" icon={<Umbrella className="text-rose-600 dark:text-rose-300" size={36} />}>
              
           </Card>
           <Card  ele={ <span><Star className="h-6 w-6 text-sky-700" /> </span> } head=" 
-No booking account needed. We take your details, do the magic, and get you ready to go.
-" sub=" 
-" >
+ Simple, no-hassle booking
+" sub=" No complicated logins or accounts needed. Just share your details, and our team does the work—booking your flights and setting up your travel plan.
+ " icon ={<MousePointerClick className="text-rose-600 dark:text-rose-300" size={36} />}>
              
           </Card>
-          <Card  ele={ <span><Star className="h-6 w-6 text-sky-700" /> </span> } head="Options for groups, family trips, and personal preferences (like allergies or mobility needs)." sub="  
-" >
+          <Card  ele={ <span><Star className="h-6 w-6 text-sky-700" /> </span> } head="Perfect for everyone
+" sub="From solo escapes and couple getaways to family or group vacations, we make sure your travel plan works for all. Need special arrangements (like mobility support or dietary considerations)? We’ve got you covered.  
+" icon={<Users   className="text-rose-600 dark:text-rose-300" size={36} />}>
              
           </Card>
 

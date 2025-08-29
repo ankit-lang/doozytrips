@@ -52,7 +52,7 @@ const Header: React.FC = () => {
           </div>
           <div className="flex items-center space-x-2">
             <MapPin size={14} />
-            <span>New York, USA</span>
+            <span>Canada</span>
           </div>
         </div>
       </div>
