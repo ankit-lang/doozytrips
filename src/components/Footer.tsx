@@ -1,7 +1,7 @@
 // components/Footer.jsx
 import React from 'react'
 import { motion } from 'framer-motion'
-import iter from "../assests/iter.png"
+import iter from "/banner/4.png"
 import { Link } from 'react-router-dom';
 const menuItems = [
   { name: 'Home', path: '/' },
@@ -12,7 +12,12 @@ const menuItems = [
      { name: 'Notes', path: '/notes' },
      { name: 'Deals', path: '/deals' },
 ]
-const destinations = ['Maldives', 'Bali', 'Sri Lanka', 'Seychelles']
+const destinations = [
+  { name: 'Maldives', image: '/banner/1.png' },
+  { name: 'Bali', image: '/banner/2.png' },
+  { name: 'Sri Lanka', image: '/banner/3.png' },
+  { name: 'Seychelles', image: '/banner/4.png' },
+]
 import logo from '../assests/logo.png'
 import { FaFacebookF, FaInstagram, FaYoutube } from 'react-icons/fa'
 import '../index.css'
@@ -80,11 +85,11 @@ export default function Footer() {
         <motion.div variants={columnVariants}>
           <h4 className="text-white font-semibold mb-4">Destinations</h4>
           <div className="grid grid-cols-2 gap-2">
-            {destinations.map((dest) => (
-              <div key={dest} className="overflow-hidden rounded-md shadow-lg">
+            {destinations.map(({ name, image }) => (
+              <div key={name} className="overflow-hidden rounded-md shadow-lg">
                 <img
-                  src= {iter}
-                  alt={dest}
+                  src={image}
+                  alt={name}
                   className="w-full h-20 object-cover"
                 />
               </div>
