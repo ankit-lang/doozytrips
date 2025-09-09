@@ -13,14 +13,17 @@ const menuItems = [
      { name: 'Deals', path: '/deals' },
 ]
 const destinations = [
-  { name: 'Maldives', image: '/banner/1.png' },
-  { name: 'Bali', image: '/banner/2.png' },
-  { name: 'Sri Lanka', image: '/banner/3.png' },
-  { name: 'Seychelles', image: '/banner/4.png' },
+  { name: 'Maldives', image: '/banner/21.png' },
+  { name: 'Bali', image: '/banner/22.png' },
+  { name: 'Sri Lanka', image: '/banner/23.png' },
+  { name: 'Seychelles', image: '/banner/24.png' },
 ]
 import logo from '../assests/logo.png'
 import { FaFacebookF, FaInstagram, FaYoutube } from 'react-icons/fa'
 import '../index.css'
+import { IoLocationSharp } from 'react-icons/io5';
+import { BsTelephoneForwardFill } from 'react-icons/bs';
+import { IoMdMailUnread } from 'react-icons/io';
 
 const social = [
   { name: 'Facebook', Icon: FaFacebookF, url: 'https://facebook.com' },
@@ -101,16 +104,16 @@ export default function Footer() {
         <motion.div variants={columnVariants}>
           <h4 className="text-white font-semibold mb-4">Contact</h4>
           <ul className="space-y-3 text-sm">
-            <li className="flex items-start">
-              <span className="mr-2">📍</span>
+            <li className="flex items-center">
+              <span className="mr-2 text-lg "><IoLocationSharp /> </span>
               <span>13608 119 Street Northwest, Edmonton, AB, Canada</span>
             </li>
-            <li className="flex items-center">
-              <span className="mr-2">📞</span>
+            <li className="flex items-center ">
+              <span className="mr-2 text-lg"><BsTelephoneForwardFill /> </span>
               <span>+1780-709-5650</span>
             </li>
             <li className="flex items-center">
-              <span className="mr-2">✉️</span>
+              <span className="mr-2 text-lg "><IoMdMailUnread /></span>
               <span>reservations@doozytrips.com</span>
             </li>
           </ul>
