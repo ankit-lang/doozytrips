@@ -1,8 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { MapPin, Phone, Mail, Clock, Send } from 'lucide-react';
 
 const Contact: React.FC = () => {
   const [isVisible, setIsVisible] = React.useState(false);
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    subject: '',
+    message: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<{ success: boolean; message: string } | null>(null);
 
   React.useEffect(() => {
     const observer = new IntersectionObserver(
@@ -25,6 +34,28 @@ const Contact: React.FC = () => {
       }
     };
   }, []);
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    const res = await fetch("https://www.doozytrips.com/api/sendmail", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(formData),
+    });
+
+    const data = await res.json();
+    if (data.success) {
+      alert("Email sent successfully!");
+    } else {
+      alert("Failed to send email: " + data.error);
+    }
+  };
 
   const contactInfo = [
     {
@@ -73,7 +104,7 @@ const Contact: React.FC = () => {
             <h3 className={`text-2xl font-bold text-gray-800 mb-6 transition-all duration-1000 ease-out ${
               isVisible ? 'translate-y-0 opacity-100' : 'translate-y-24 opacity-0'
             }`} style={{ transitionDelay: '600ms' }}>Send us a Message</h3>
-            <form className="space-y-6">
+            <form className="space-y-6" onSubmit={handleSubmit}>
               <div className={`grid grid-cols-1 md:grid-cols-2 gap-6 transition-all duration-1000 ease-out ${
                 isVisible ? 'translate-y-0 opacity-100' : 'translate-y-24 opacity-0'
               }`} style={{ transitionDelay: '700ms' }}>
@@ -81,16 +112,22 @@ const Contact: React.FC = () => {
                   <label className="block text-gray-700 font-medium mb-2">First Name</label>
                   <input
                     type="text"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
-                    placeholder="John"
+                    name="firstName"
+                    value={formData.firstName}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    required
                   />
                 </div>
                 <div>
                   <label className="block text-gray-700 font-medium mb-2">Last Name</label>
                   <input
                     type="text"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
-                    placeholder="Doe"
+                    name="lastName"
+                    value={formData.lastName}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    required
                   />
                 </div>
               </div>
@@ -101,8 +138,12 @@ const Contact: React.FC = () => {
                 <label className="block text-gray-700 font-medium mb-2">Email</label>
                 <input
                   type="email"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   placeholder="john@example.com"
+                  required
                 />
               </div>
               
@@ -112,8 +153,12 @@ const Contact: React.FC = () => {
                 <label className="block text-gray-700 font-medium mb-2">Subject</label>
                 <input
                   type="text"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
+                  name="subject"
+                  value={formData.subject}
+                  onChange={handleChange}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   placeholder="Event Planning Inquiry"
+                  required
                 />
               </div>
               
@@ -123,20 +168,29 @@ const Contact: React.FC = () => {
                 <label className="block text-gray-700 font-medium mb-2">Message</label>
                 <textarea
                   rows={6}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   placeholder="Tell us about your event requirements..."
+                  required
                 ></textarea>
               </div>
               
+              {/* Add status message */}
+              {submitStatus && (
+                <div className={`text-center p-2 ${submitStatus.success ? 'text-green-600' : 'text-red-600'}`}>
+                  {submitStatus.message}
+                </div>
+              )}
+              
               <button
                 type="submit"
-                className={`w-full bg-blue-800 hover:bg-blue-900 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-700 transform hover:scale-105 flex items-center justify-center space-x-2 ${
-                  isVisible ? 'translate-y-0 opacity-100' : 'translate-y-24 opacity-0'
-                }`}
-                style={{ transitionDelay: '1100ms' }}
+                disabled={isSubmitting}
+                className={`w-full bg-blue-800 hover:bg-blue-900 text-white px-8 py-3 rounded-lg ${isSubmitting ? 'opacity-50 cursor-not-allowed' : ''}`}
               >
                 <Send size={20} />
-                <span>Send Message</span>
+                <span>{isSubmitting ? 'Sending...' : 'Send Message'}</span>
               </button>
             </form>
           </div>
