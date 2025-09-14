@@ -128,7 +128,7 @@ export default function Footer() {
       >
         <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between text-sm text-gray-500">
           <span>Copyright © 2025 Doozy Trips - All Rights Reserved.</span>
-          <span className="mt-2 md:mt-0">Designed &amp; Developed by Do More Services</span>
+          {/* <span className="mt-2 md:mt-0">Designed &amp; Developed by Do More Services</span> */}
         </div>
       </motion.div>
     </motion.footer>

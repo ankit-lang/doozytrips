@@ -156,7 +156,11 @@ const Hero: React.FC = () => {
             className="group bg-amber-500 hover:bg-amber-600 text-white px-8 py-3 rounded-full font-semibold flex items-center space-x-2 transition-all duration-300 transform hover:scale-105"
             style={{ transitionDelay: '800ms' }}
           >
-            <span>CALL US</span>
+            <span>
+              <a href="tel:+17807095650">
+CALL US
+              </a>
+              </span>
             <ArrowRight className="group-hover:translate-x-1 transition-transform" size={20} />
           </button>
           
@@ -165,7 +169,11 @@ const Hero: React.FC = () => {
           
           >
             <Play size={20} />
-            <span>WHATSAPP</span>
+            <span>
+              <a href="https://wa.me/17807095650" target="_blank" rel="noopener">
+              WHATSAPP
+              </a>
+              </span>
           </button>
         </div>
         <div className="mt-10">
