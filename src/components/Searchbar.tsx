@@ -20,7 +20,7 @@ export function SearchBar({ onNext }) {
   const [date, setDate] = useState('')
   const [tourType, setTourType] = useState(TOUR_TYPES[0])
 
-  const handleNext = async() => {
+  const handleNext = async(e) => {
      e.preventDefault();
     
     const res = await fetch("https://www.doozytrips.com/api/sendbooking", {
