@@ -13,7 +13,7 @@ export default async function handler(req, res) {
     await resend.emails.send({
       from: "reservations@doozytrips.com", // or your verified domain email
       to: "reservations@doozytrips.com", // Replace with your GoDaddy email
-      subject: "New  Form Submission " + subject,
+      subject: "New  Form Submission " ,
       html: `
         <h3>New Contact Form Submission</h3>
         <p><strong>destination:</strong>${destination}  </p>
