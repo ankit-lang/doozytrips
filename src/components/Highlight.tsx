@@ -121,7 +121,7 @@ export default function EmergencyTravelHighlights() {
               <PhoneCall />
             </div>
             <div>
-              <p className="text-md text-white">
+              <p className="text-md text-slate-600 dark:text-white/90">
                 Need help now? Call our emergency line or message us on WhatsApp —
                 we’re standing by.
               </p>
