@@ -20,8 +20,37 @@ export function SearchBar({ onNext }) {
   const [date, setDate] = useState('')
   const [tourType, setTourType] = useState(TOUR_TYPES[0])
 
-  const handleNext = () => {
+  const handleNext = async(e) => {
     // You can replace this with navigation or any handler
+     e.preventDefault();
+  try {
+    const response = await fetch('https://www.doozytrips.com/api/sendhome', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        destination,
+        date,
+        tourType,
+        // Add any other form data you need to send
+      }),
+    });
+
+    const data = await response.json();
+    if (response.ok) {
+      alert('Email sent successfully!');
+      // You can clear the form here if needed
+      setDestination(DESTINATIONS[0]);
+      setDate('');
+      setTourType(TOUR_TYPES[0]);
+    } else {
+      alert(`Error: ${data.error}`);
+    }
+  } catch (error) {
+    console.error('Failed to send email:', error);
+    alert('Failed to send email. Please try again later.');
+  }
     onNext?.({ destination, date, tourType })
   }
 
