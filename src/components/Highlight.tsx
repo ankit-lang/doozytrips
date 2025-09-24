@@ -64,7 +64,7 @@ export default function EmergencyTravelHighlights() {
               </div>
             <div className="flex items-center gap-4">
               <div>
-                <h3 className="font-semibold text-white text-lg">Emergency travel solutions at unbeatable rates</h3>
+                <h3 className="font-semibold text-slate-600 dark:text-white/90 text-lg">Emergency travel solutions at unbeatable rates</h3>
                 <p className="mt-1 text-center text-sm text-slate-600 dark:text-white/90">
      Life is unpredictable—flights don’t have to be. Whether it’s a family emergency, an urgent business meeting, or a sudden travel plan, Doozy Trips specializes in last-minute Canada–India and India–Canada flights. Our exclusive airline connections allow us to find the best fares in the shortest time, saving you stress and money.
                 </p>
@@ -85,8 +85,8 @@ export default function EmergencyTravelHighlights() {
               </div>
             <div className="flex items-center gap-4">
               <div>
-                <h3 className="font-semibold text-white text-center text-lg">Canada-wide service, and support </h3>
-                <p className="mt-1 text-center text-sm text-white/90 ">
+                <h3 className="font-semibold text-slate-600 dark:text-white/90 text-center text-lg">Canada-wide service, and support </h3>
+                <p className="mt-1 text-center text-sm text-slate-600 dark:text-white/90">
                   From Toronto to Vancouver, Calgary to Edmonton—we serve travelers all across Canada. And the support doesn’t stop once you land. With dedicated teams in both Canada and India, you’ll always have a helping hand no matter which country you’re in. We’re truly a travel partner that moves with you.
                 </p>
               </div>
@@ -106,8 +106,8 @@ export default function EmergencyTravelHighlights() {
               </div>
             <div className="flex items-center gap-4">
               <div>
-                <h3 className="font-semibold text-white text-center text-lg">Friendly 24/7 personal assistance</h3>
-                <p className="mt-1 text-sm text-center text-white/90">
+                <h3 className="font-semibold text-slate-600 dark:text-white/90 text-center text-lg">Friendly 24/7 personal assistance</h3>
+                <p className="mt-1 text-sm text-center text-slate-600 dark:text-white/90">
                   Travel emergencies don’t wait for business hours—and neither do we. Our team is available around the clock, ready to book, reschedule, or assist with your travel needs instantly. Whether you prefer a quick call, WhatsApp chat, or email, you’ll always get personalized support with a smile. 
                 </p>
               </div>
