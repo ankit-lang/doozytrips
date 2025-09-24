@@ -11,9 +11,11 @@ import SupportPage from './components/Support.tsx';
 // import AboutSection from './components/Aboutsection.tsx';
 import Aboutus from './components/About.tsx';
 import FooterNotesPage from './components/Footerpagenotes.tsx';
+import { HelmetProvider } from 'react-helmet-async';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
+    <HelmetProvider>
        <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />} />
@@ -28,6 +30,7 @@ createRoot(document.getElementById('root')!).render(
         {/* Add other routes as needed */}
       </Routes>
       </BrowserRouter>
+      </HelmetProvider>
     
   </StrictMode>
 );

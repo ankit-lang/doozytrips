@@ -11,13 +11,18 @@ import AboutSection from './components/Aboutsection';
 import PopularDestinations from './components/Populardestination';
 import AdventureActivity from './components/Adventureisland';
 import EmergencyTravelHighlights from './components/Highlight';
+import DoozyTripsLanding from './components/heroadditional';
+import MetaData from './components/Homemeta';
 
 function App() {
   return (
+    <>
+    <MetaData/> 
     <div className="min-h-screen">
       <Header />
       <Hero />
       {/* <TopTours/> */}
+      <DoozyTripsLanding/>
       <EmergencyTravelHighlights/>
       <AboutSection/>
       {/* <PopularDestinations/> */}
@@ -31,6 +36,7 @@ function App() {
       <Contact />
       <Footer />
     </div>
+    </>
   );
 }
 

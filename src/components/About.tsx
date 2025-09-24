@@ -6,6 +6,8 @@ import Footer from "./Footer";
 import TextType, { TextAnimate } from "./splittext";
 import { Globe, PhoneCall, HeartHandshake, Compass } from "lucide-react";
 import { PlaneTakeoff, DollarSign, Headset } from "lucide-react";
+import { Helmet } from "react-helmet-async";
+import MetaDataAbout from "./Aboutmeta";
 export default function Aboutus() {
   const fadeUp = {
 hidden: { opacity: 0, y: 30 },
@@ -17,6 +19,7 @@ transition: { delay: i * 0.15, duration: 0.6, ease: "easeOut" },
 };
   return (
       <>
+      <MetaDataAbout/>
       <Header/>
     <div className="min-h-screen bg-gradient-to-b from-white via-sky-50 to-white text-gray-900">
       {/* Banner */}
@@ -32,7 +35,23 @@ transition: { delay: i * 0.15, duration: 0.6, ease: "easeOut" },
           >
      We are Doozy Trips,
           </motion.h1>
-
+ <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h1 className="text-4xl font-extrabold mt-2 sm:text-5xl md:text-6xl">
+          Find Your Adventure Buddy
+        </h1>
+        <p className="mt-4 text-xl ">
+          The greatest adventures are best enjoyed with others.
+        </p>
+        
+        <div className="mt-10 bg-white rounded-lg shadow-lg p-8">
+          <p className="mt-4 text-lg text-gray-700">
+            Because of this, our travel buddy platform makes it simple to meet like-minded Canadians, find a travel companion in Canada, and participate in group excursions that cater to all types of adventurers. You can find the right people to accompany you on your journey, whether your dreams involve exciting city escapes, picturesque hikes in the Rockies, or adventure travel in Canada.
+          </p>
+          <p className="mt-6 text-lg text-gray-700">
+            We also recognize the importance of wise, economical travel. Our platform facilitates cost-sharing and the creation of enduring memories by connecting you with organized tour groups and low-cost travel companions in Canada. Because travel is always better when done with others, Doozy Trips makes every trip more memorable, more social, and more reasonably priced.
+          </p>
+        </div>
+      </div>
 <motion.p
 variants={fadeUp}
 custom={1}
