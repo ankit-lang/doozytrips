@@ -4,10 +4,13 @@ import  Card  from "../Card";
 import Header from "../Header";
 import Footer from "../Footer";
 import TextType, { TextAnimate } from "../splittext";
+import Metaflight from "./Meta";
+// import { Meta } from "react-router-dom";
 
 export default function Flightpage() {
   return (
       <>
+      <Metaflight/>
       <Header/>
     <div className="min-h-screen bg-gradient-to-b from-white via-sky-50 to-white text-gray-900">
       {/* Banner */}
