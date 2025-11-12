@@ -8,8 +8,7 @@ const MetaData: React.FC = () => {
     <Helmet>
       {/* Primary SEO Meta Tags */}
       <title>Travel Buddy in Canada | Group Travel, Tours & Trip Leaders | Doozy Trip</title>
-      <meta name="description" content="Find your perfect travel buddy in Canada with Doozy Trip. Join exciting group travel adventures, guided tours, and connect with experienced trip leaders to explore Canada’s top destinations on a budget-friendly, memorable journey." />
-      <meta name="keywords" content="travel buddy Canada, find travel buddy, group travel Canada, travel companions Canada, shared trips Canada, meet travelers Canada, join group trips, Canadian travel buddies, adventure travel Canada, budget travel companions, tour groups Canada, travel partner Canada, travel buddy site, travel buddy platform" />
+     
       <link rel="canonical" href="https://www.doozytrips.com/" />
 
       {/* Robot Directives */}
