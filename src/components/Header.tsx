@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, MapPin, Phone, Mail } from 'lucide-react';
 import logo from '../assests/logo.png';
+import { Link } from 'react-router-dom';
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -62,10 +63,12 @@ const Header: React.FC = () => {
         isLoaded ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0'
       }`} style={{ transitionDelay: '200ms' }}>
         <div className="flex justify-between items-center">
+          <Link to={"/"}>
           <div className=" w-[3rem] 
            "> 
-            <img src={logo} alt=""  />
+            <img src={logo} alt="logo"  />
           </div>
+           </Link>
           {/* <div className={`text-2xl font-bold text-blue-800 transition-all duration-1000 ease-out ${
             isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-6 opacity-0'
           }`} style={{ transitionDelay: '400ms' }}>
@@ -78,16 +81,16 @@ const Header: React.FC = () => {
             isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-6 opacity-0'
           }`} style={{ transitionDelay: '600ms' }}>
             {navItems.map((item) => (
-              <a
+              <Link
                 key={item.name}
-                href={item.href}
+                to={item.href}
                 className={`font-medium transition-colors duration-300 hover:text-white hover:bg-primary p-2
                    rounded-full ${
                   isScrolled ? 'text-gray-800' : 'text-white'
                 }`}
               >
                 {item.name}
-              </a>
+              </Link>
             ))}
             {/* <button className={`bg-primary text-white px-6 py-2 rounded-full hover:bg-amber-600 transition-all duration-700 transform hover:scale-105 ${
               isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-6 opacity-0'
