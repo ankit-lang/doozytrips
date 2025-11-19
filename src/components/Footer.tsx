@@ -11,6 +11,7 @@ const menuItems = [
     { name: 'Vacations', path: '/vacations' },
      { name: 'Notes', path: '/notes' },
      { name: 'Deals', path: '/deals' },
+  { name: 'Privacy Policy', path: '/privacy' },
 ]
 const destinations = [
   { name: 'Maldives', image: '/banner/21.png' },
