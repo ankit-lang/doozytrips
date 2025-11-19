@@ -12,6 +12,7 @@ import SupportPage from './components/Support.tsx';
 import Aboutus from './components/About.tsx';
 import FooterNotesPage from './components/Footerpagenotes.tsx';
 import { HelmetProvider } from 'react-helmet-async';
+import Privacy from './components/Privacy.tsx';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -26,6 +27,7 @@ createRoot(document.getElementById('root')!).render(
               <Route path="/support" element={<SupportPage />} />
             <Route path="/aboutus" element={<Aboutus />} />
        <Route path="/notes" element={<FooterNotesPage />} />
+       <Route path="/privacy" element={<Privacy />} />
       
         {/* Add other routes as needed */}
       </Routes>

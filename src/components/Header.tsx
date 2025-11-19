@@ -59,7 +59,7 @@ const Header: React.FC = () => {
       </div>
 
       {/* Main Navigation */}
-      <nav className={`container mx-auto px-4 py-4 transition-all duration-1000 ease-out ${
+      <nav className={`pl-20 pr-20 px-4 py-4 bg-sky-700  transition-all duration-1000 ease-out ${
         isLoaded ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0'
       }`} style={{ transitionDelay: '200ms' }}>
         <div className="flex justify-between items-center">
@@ -77,16 +77,16 @@ const Header: React.FC = () => {
           </div> */}
 
           {/* Desktop Navigation */}
-          <div className={`hidden md:flex items-center space-x-8 transition-all duration-1000 ease-out ${
-            isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-6 opacity-0'
+          <div className={`hidden md:flex items-center  space-x-8 transition-all duration-1000 ease-out ${
+            isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-6 opacity-100'
           }`} style={{ transitionDelay: '600ms' }}>
             {navItems.map((item) => (
               <Link
                 key={item.name}
                 to={item.href}
-                className={`font-medium transition-colors duration-300 hover:text-white hover:bg-primary p-2
+                className={`font-medium transition-colors duration-300  hover:text-white hover:bg-primary p-2
                    rounded-full ${
-                  isScrolled ? 'text-gray-800' : 'text-white'
+                  isScrolled ? 'text-white' : 'text-white'
                 }`}
               >
                 {item.name}
