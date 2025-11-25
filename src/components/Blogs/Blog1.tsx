@@ -31,9 +31,9 @@ const DoozyBlogPage = () => {
 
                   {/* --- Main Content Layout --- */}
                   <div className="bg-[#0077b5] text-white py-10 px-6 md:px-64 shadow-md w-full mx-auto">
-                        <h1 className="text-3xl font-bold mb-4">
+                        {/* <h1 className="text-3xl font-bold mb-4">
                               Your Best Source for Last-Minute Tickets & Low Cost Flights in Canada
-                        </h1>
+                        </h1> */}
                         <p className="mb-4">
                               Looking for the <strong>best low-cost flights across Canada</strong>—especially at the last minute? <span className="font-semibold">Doozy Trips</span> has you covered. Whether you’re planning a sudden business trip, a weekend getaway, or an urgent family visit, finding affordable flights on short notice can feel stressful. That’s exactly why Doozy Trips was created: to make spontaneous travel easy, fast, and budget-friendly for every Canadian.
                         </p>
