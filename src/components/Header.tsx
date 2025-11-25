@@ -30,6 +30,7 @@ const Header: React.FC = () => {
       { name: 'Notes', href: '/notes' },
         { name: 'Help&Support', href: '/support' },
           { name: 'Deals', href: '/deals' },
+    { name: 'Blogs', href: '/blogs' },
     { name: 'Privacy Policy', href: '/privacy' },
 
   ];
@@ -121,14 +122,14 @@ const Header: React.FC = () => {
         {isMenuOpen && (
           <div className="md:hidden mt-4 bg-white rounded-lg shadow-lg p-4 animate-fade-in">
             {navItems.map((item) => (
-              <a
+              <Link
                 key={item.name}
-                href={item.href}
+                to={item.href}
                 className="block py-2 text-gray-800 hover:text-primary transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {item.name}
-              </a>
+              </Link>
             ))}
             {/* <button className="w-full mt-4 bg-primary text-white py-2 rounded-full hover:bg-amber-600 transition-colors">
               Get Quote

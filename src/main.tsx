@@ -13,6 +13,8 @@ import Aboutus from './components/About.tsx';
 import FooterNotesPage from './components/Footerpagenotes.tsx';
 import { HelmetProvider } from 'react-helmet-async';
 import Privacy from './components/Privacy.tsx';
+import Blog from './components/Blogs/Blog.tsx';
+import Blog1 from './components/Blogs/Blog1.tsx';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -28,6 +30,8 @@ createRoot(document.getElementById('root')!).render(
             <Route path="/aboutus" element={<Aboutus />} />
        <Route path="/notes" element={<FooterNotesPage />} />
        <Route path="/privacy" element={<Privacy />} />
+          <Route path="/blogs" element={<Blog />} />
+          <Route path="/blog/1" element={<Blog1 />} />
       
         {/* Add other routes as needed */}
       </Routes>
