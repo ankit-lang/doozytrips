@@ -2,13 +2,64 @@ import React from 'react';
 import { Plane, Calendar, MapPin, ArrowRight, Menu, CheckCircle } from 'lucide-react';
 import Header from '../Header';
 import Footer from '../Footer';
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 
 const DoozyBlogPage = () => {
       const brandColor = "#0077b5";
-
+      const schemaData = {
+            "@context": "https://schema.org",
+            "@type": "TravelAgency",
+            "name": "Doozy Trips",
+            "url": "https://www.doozytrips.com",
+            "logo": "https://www.doozytrips.com/assets/logo-Cui3VJTW.png",
+            "description": "Doozy Trips offers last-minute flight tickets and low-cost flights in Canada with fast support.",
+            "sameAs": [
+                  "https://www.facebook.com/profile.php?id=61579441106724",
+                  "https://www.instagram.com/doozy_trips/",
+                  "https://x.com/DoozyTrips"
+            ],
+            "address": {
+                  "@type": "PostalAddress",
+                  "addressCountry": "CA"
+            }
+      };
       return (
-            <div className="min-h-screen bg-gray-50 font-sans text-slate-800">
+            <HelmetProvider>
+                  <Helmet>
+                        {/* Primary Meta Tags */}
+                        <title>Last-Minute Tickets Today | Low Cost Flights Canada | Doozy Trip</title>
+                        <meta charSet="UTF-8" />
+                        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                        <meta name="description" content="Looking for low cost flights in Canada? Doozy Trips offers fast last-minute booking, budget-friendly deals, and personalized support—travel more while spending less." />
+                        <meta name="keywords" content="low cost flights Canada, last minute tickets Canada, cheap flights Canada, budget flights, last minute flight deals, affordable flights Canada, doozy trips, travel in canada" />
 
+                        {/* Canonical URL */}
+                        <link rel="canonical" href="https://www.doozytrips.com/" />
+
+                        {/* Robots Tags */}
+                        <meta name="robots" content="index, follow" />
+                        <meta name="googlebot" content="index, follow" />
+
+                        {/* Open Graph / Facebook */}
+                        <meta property="og:title" content="Last-Minute Tickets Today | Low Cost Flights Canada | Doozy Trip" />
+                        <meta property="og:description" content="Book low cost flights in Canada with Doozy Trips. Last-minute deals, affordable fares & quick booking support." />
+                        <meta property="og:image" content="https://www.doozytrips.com/banner/7.png" />
+                        <meta property="og:url" content="https://www.doozytrips.com/" />
+                        <meta property="og:type" content="website" />
+
+                        {/* Twitter Card */}
+                        <meta name="twitter:card" content="summary_large_image" />
+                        <meta name="twitter:title" content="Last-Minute Tickets Today | Low Cost Flights Canada | Doozy Trip" />
+                        <meta name="twitter:description" content="Find affordable last-minute flights across Canada with Doozy Trips. Book fast & save more!" />
+                        <meta name="twitter:image" content="https://www.doozytrips.com/assets/flight-banner.jpg" />
+
+                        {/* Schema JSON-LD Script */}
+                        <script type="application/ld+json">
+                              {JSON.stringify(schemaData)}
+                        </script>
+                  </Helmet>
+            <div className="min-h-screen bg-gray-50 font-sans text-slate-800">
+                  
                   {/* --- Navigation --- */}
                  <Header/>
                   {/* --- Hero / Header Section --- */}
@@ -53,6 +104,7 @@ const DoozyBlogPage = () => {
                   </div>
                   <Footer/>
             </div>
+            </HelmetProvider>
       );
 };
 
