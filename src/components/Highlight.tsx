@@ -34,7 +34,7 @@ export default function EmergencyTravelHighlights() {
             className="mt-4 md:mt-0 flex gap-3"
           >
             <a
-              href="#book"
+              href="https://wa.me/17807095650"
               className="inline-flex md:mr-4 items-center gap-2 px-4 py-2 rounded-2xl bg-indigo-600 text-white font-medium shadow-md hover:shadow-lg focus:outline-none"
             >
               <Plane size={16} />
@@ -125,7 +125,10 @@ export default function EmergencyTravelHighlights() {
                 Need help now? Call our emergency line or message us on WhatsApp —
                 we’re standing by.
               </p>
-              <p className="mt-1 font-medium text-slate-800 dark:text-slate-100">+1 (555) 123‑4567</p>
+              <a href="tel:+1(780)7095650">
+
+              <p className="mt-1 font-medium text-slate-800 dark:text-slate-100">+1(780)7095650</p>
+              </a>
             </div>
           </div>
 

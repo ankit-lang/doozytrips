@@ -27,9 +27,9 @@ import { BsTelephoneForwardFill } from 'react-icons/bs';
 import { IoMdMailUnread } from 'react-icons/io';
 
 const social = [
-  { name: 'Facebook', Icon: FaFacebookF, url: 'https://facebook.com' },
-  { name: 'Instagram', Icon: FaInstagram, url: 'https://instagram.com' },
-  { name: 'YouTube', Icon: FaYoutube, url: 'https://youtube.com' },
+  // { name: 'Facebook', Icon: FaFacebookF, url: 'https://facebook.com' },
+  { name: 'Instagram', Icon: FaInstagram, url: 'https://www.instagram.com/doozy_trips' },
+  // { name: 'YouTube', Icon: FaYoutube, url: 'https://youtube.com' },
 ]
 
 
@@ -105,17 +105,25 @@ export default function Footer() {
         <motion.div variants={columnVariants}>
           <h4 className="text-white font-semibold mb-4">Contact</h4>
           <ul className="space-y-3 text-sm">
-            <li className="flex items-center">
+            <li className="flex items-center" >
+                <Link to={"https://maps.app.goo.gl/KF8QqNoXo29pL5c36"} className='flex items-center'>
               <span className="mr-2 text-lg "><IoLocationSharp /> </span>
               <span>13608 119 Street Northwest, Edmonton, AB, Canada</span>
+                </Link>
             </li>
             <li className="flex items-center ">
+                <a href="tel:+1780-709-5650" className='flex items-center'>
               <span className="mr-2 text-lg"><BsTelephoneForwardFill /> </span>
               <span>+1780-709-5650</span>
+                </a>
+                  
             </li>
             <li className="flex items-center">
+                <a href="mailto:reservations@doozytrips.com" className='flex items-center' >
               <span className="mr-2 text-lg "><IoMdMailUnread /></span>
+                  
               <span>reservations@doozytrips.com</span>
+                </a>
             </li>
           </ul>
         </motion.div>
@@ -129,7 +137,7 @@ export default function Footer() {
       >
         <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between text-sm text-gray-500">
           <span>Copyright © 2025 Doozy Trips - All Rights Reserved.</span>
-          <span className="mt-2 md:mt-0">Designed &amp; Developed by Do More Services</span>
+          <span className="mt-2 md:mt-0">DoozyTrips</span>
         </div>
       </motion.div>
     </motion.footer>

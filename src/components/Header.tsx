@@ -46,17 +46,25 @@ const Header: React.FC = () => {
         <div className="container mx-auto text-center  flex justify-between items-center">
           <div className="flex items-center space-x-6">
             <div className="flex items-center  text-center justify-center space-x-2">
+              <a href="tel:+1(780)7095650" className='flex items-center'>
+
               <Phone size={14} />
               <span> +1(780)7095650</span>
+              </a>
             </div>
             <div className="flex items-center space-x-2">
+              <a href="mailto:reservations@doozytrips.com" className='flex  space-x-2 items-center'>
               <Mail size={14} />
               <span>reservations@doozytrips.com</span>
+
+              </a>
             </div>
           </div>
           <div className="flex items-center space-x-2">
+            <Link to={"https://maps.app.goo.gl/KF8QqNoXo29pL5c36"} className='flex space-x-2 items-center'>
             <MapPin size={14} />
             <span>Canada</span>
+            </Link>
           </div>
         </div>
       </div>

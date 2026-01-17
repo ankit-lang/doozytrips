@@ -165,7 +165,7 @@ const Hero: React.FC = () => {
           
           >
             <Play size={20} />
-            <a href="tel:+1780-709-5650">WHATSAPP</a>
+            <a href="https://wa.me/17807095650">WHATSAPP</a>
           </button>
         </div>
         <div className="mt-10">

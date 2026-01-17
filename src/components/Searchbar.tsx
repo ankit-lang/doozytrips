@@ -49,7 +49,7 @@ export function SearchBar({ onNext }) {
     }
   } catch (error) {
     console.error('Failed to send email:', error);
-    alert('Failed to send email. Please try again later.');
+    alert('Failed to send email. Fill All details.');
   }
     onNext?.({ destination, date, tourType })
   }
